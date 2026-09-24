@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="painel">
+        <nav class="menu">
+            <a href="dashboard.html">Início</a>
+            <a href="index.html" id="sair">Sair</a>
+        </nav>
+        <h1>Dashboard</h1>
+        <p id="boasVindas"></p>
+    </div>
+    <script>
+        const usuarioLogado = sessionStorage.getItem("usuarioLogado");
+         if (!usuarioLogado) {
+         // Sem login: volta para a tela de login
+         window.location.href = "index.html";
+         } else {
+         document.getElementById("boasVindas").textContent =
+         "Bem-vindo(a), " + usuarioLogado + "!";
+         }
+         document.getElementById("sair").addEventListener("click", () => {
+         sessionStorage.removeItem("usuarioLogado");
+         });
+    </script>
+</body>
+
+</html>

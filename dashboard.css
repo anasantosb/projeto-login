@@ -1,0 +1,25 @@
+.painel {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    width: 420px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.menu a {
+    color: #03dac6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
